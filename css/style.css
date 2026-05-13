@@ -1,0 +1,282 @@
+/* ── RESET & BASE ───────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* ── NAVIGATION ─────────────────────────────── */
+nav {
+  position: fixed;        /* stays at top when you scroll */
+  top: 0;
+  width: 100%;
+  background-color: #1a1a2e;
+  padding: 15px 40px;
+  display: flex;
+  gap: 30px;
+  z-index: 1000;          /* stays above everything */
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;  /* smooth color change on hover */
+}
+
+nav a:hover {
+  color: #e94560;          /* accent color on hover */
+}
+
+/* ── SECTIONS ───────────────────────────────── */
+section {
+         /* each section fills the screen */
+  padding: 100px 60px 60px; /* top padding so nav doesn't cover content */
+}
+
+/* alternate background so sections are easy to tell apart */
+section:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* ── HEADINGS ───────────────────────────────── */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 650px;        /* keeps text readable, not too wide */
+}
+
+/* ── HOME SECTION ───────────────────────────── */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+#home p {
+  color: #cccccc;
+  margin-top: 10px;
+}
+
+/* ── PROJECTS SECTION ───────────────────────── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);  /* card lifts on hover */
+}
+
+
+
+
+/* ── CONTACT SECTION ────────────────────────── */
+.contact-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  color: #1a1a2e;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-bottom: 2px solid #e94560;
+  padding-bottom: 2px;
+}
+/* ── CONTACT AT BOTTOM OF PAGE ──────────────── */
+#contact {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  padding: 40px 60px;
+  margin-top: auto;
+}
+
+#contact h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: #e94560;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ── BUTTONS ────────────────────────────────── */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #e94560;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #c73652;
+}
+
+
+
+/* ── PROJECT GRID ───────────────────────────── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* ── PROJECT CARD ───────────────────────────── */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                /* spacing between each element inside */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);  /* lifts card on hover */
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  color: #1a1a2e;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ── TAGS (HTML, CSS, Python etc) ───────────── */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  color: #1a1a2e;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ── CARD BUTTONS ───────────────────────────── */
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;    /* pushes buttons to bottom of card */
+}
+
+.btn-primary {
+  background-color: #e94560;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #c73652;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #e94560;
+  color: #e94560;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #e94560;
+  color: white;
+}
+
+/* ── RESUME PAGE ────────────────────────────── */
+#resume {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 40px 60px;
+}
+
+#resume h2 {
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+/* ── PDF VIEWER ─────────────────────────────── */
+.pdf-container {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 800px;     /* adjust this to show more or less of the PDF */
+  border: none;
+}
+
+/* ── DOWNLOAD BUTTON ────────────────────────── */
+.resume-download {
+  margin-top: 20px;
+}
